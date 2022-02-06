@@ -1,0 +1,35 @@
+<ion-split-pane contentId="menu-content">
+  <ion-menu contentId="menu-content">
+    <ion-header>
+      <ion-toolbar color="primary" class="ion-text-center">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <app-sidebar></app-sidebar>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button>
+            <ion-menu-button></ion-menu-button>
+          </ion-button>
+        </ion-buttons>
+        <ion-title class="ion-justify-center"></ion-title>
+        <ion-buttons slot="end">
+          <ion-icon slot="end" name="chatbox-outline"></ion-icon
+          ><ion-label>Chat with Us</ion-label>
+          <ion-icon slot="end" name="chevron-down-outline"></ion-icon
+          ><ion-label>English</ion-label>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <app-map></app-map>
+    </ion-content>
+  </ion-router-outlet>
+</ion-split-pane>

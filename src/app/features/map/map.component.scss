@@ -1,0 +1,39 @@
+#floors-menu {
+    position: absolute;
+    top: 1em;
+    min-width: 3rem;
+    left: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .floor-button {
+      float: right;
+      width: 4em;
+      height: 3em;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-transform: uppercase;
+      padding: 0.25rem 0.25em;
+      text-align: center;
+      display: block;
+      white-space: nowrap;
+      word-wrap: break-word;
+      box-shadow: 0 0 8px;
+      margin-bottom: 0.1em;
+      &:first-child {
+        border-radius: 3px 3px 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 3px 3px;
+      }
+    
+    }
+  }
+  
+  #map {
+      width: 100v;
+      height: 100vh;
+  }
