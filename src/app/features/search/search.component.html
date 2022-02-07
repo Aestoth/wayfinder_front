@@ -17,6 +17,9 @@
               <span>From</span>
             </ion-label>
             <ion-input clearinput formControlName="from" class="form-controll" required></ion-input>
+            <div *ngFor="let row of layout">
+              <div *ngFor="let list of row.pois">{{list.name}}</div>
+            </div>
           </ion-item>
         </ion-col>
       </ion-row>

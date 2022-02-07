@@ -1,6 +1,4 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { User } from 'src/app/class/user';
-import { Weather } from 'src/app/class/weather';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({

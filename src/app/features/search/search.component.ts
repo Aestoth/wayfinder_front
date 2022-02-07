@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { iLayout } from 'src/app/interfaces/layout';
+import { iPois } from 'src/app/interfaces/pois';
+
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -12,6 +15,7 @@ export class SearchComponent implements OnInit {
   public isSubmitted: boolean = false;
   public from!: string
   public to!: string
+  public layout: iLayout[] = []
 
   constructor(public formbuilder: FormBuilder, private _apiService: ApiService) {}
 
@@ -20,6 +24,12 @@ export class SearchComponent implements OnInit {
       from: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       to: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]]
     });
+
+    this._apiService.getPois().subscribe((response) => {
+      this.layout = response
+      console.log(this.layout);
+      
+    })
   }
 
   submitForm() {

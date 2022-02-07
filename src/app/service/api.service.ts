@@ -1,7 +1,9 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from '../class/user';
-import { iLayout } from '../class/layout';
+import { iPois } from '../interfaces/pois';
+import { iLayout } from '../interfaces/layout';
+
+
 
 
 @Injectable({
@@ -21,12 +23,8 @@ export class ApiService implements OnInit  {
   //   return this.http.get<Weather[]>(this.direction);
   // }
 
-  getUser() {
-    return this.http.get<User[]>(this.url + '/api/v1/users');
-  }
-
-  getLayout() {
-    return this.http.get<iLayout>(this.url + '/api/v1/layout');
+  getPois() {
+    return this.http.get<iLayout[]>(this.url + '/api/v1/pois');
   }
 
   showPath() {
